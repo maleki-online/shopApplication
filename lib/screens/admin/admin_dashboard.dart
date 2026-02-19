@@ -157,7 +157,7 @@ class AdminDashboard extends StatelessWidget {
             },
             child: Container(
               height: 100,
-              width: 380,
+              width: 390,
               decoration: BoxDecoration(
                 color: Colors.teal[700],
                 borderRadius: BorderRadius.all(Radius.circular(25)),
