@@ -18,34 +18,43 @@ class UserProfileScreen extends StatelessWidget {
       body: user == null
           ? Center(child: Text('هیچ اطلاعاتی برای نمایش وجود ندارد.'))
           : Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: user.imagePath != null && user.imagePath!.isNotEmpty
-                  ? FileImage(File(user.imagePath!))
-                  : AssetImage('assets/images/default_avatar.png') as ImageProvider,
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundImage:
+                            user.imagePath != null && user.imagePath!.isNotEmpty
+                                ? FileImage(File(user.imagePath!))
+                                : AssetImage('assets/images/default_avatar.png')
+                                    as ImageProvider,
+                      ),
+                      SizedBox(height: 20),
+                      Text('نام: ${user.name}', style: TextStyle(fontSize: 18)),
+                      SizedBox(height: 8),
+                      Text('ایمیل: ${user.email}',
+                          style: TextStyle(fontSize: 16)),
+                      SizedBox(height: 8),
+                      Text('شماره تماس: ${user.phone}',
+                          style: TextStyle(fontSize: 16)),
+                      SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (_) => EditProfileScreen()),
+                          );
+                        },
+                        child: Text('ویرایش پروفایل'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            SizedBox(height: 20),
-            Text('نام: ${user.name}', style: TextStyle(fontSize: 18)),
-            SizedBox(height: 8),
-            Text('ایمیل: ${user.email}', style: TextStyle(fontSize: 16)),
-            SizedBox(height: 8),
-            Text('شماره تماس: ${user.phone}', style: TextStyle(fontSize: 16)),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => EditProfileScreen()),
-                );
-              },
-              child: Text('ویرایش پروفایل'),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
-
