@@ -84,63 +84,69 @@ class AdminDashboard extends StatelessWidget {
           ),
           SizedBox(
             height: 30,
+            width: 30,
           ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed('/manage-categories');
-            },
-            child: Container(
-              height: 100,
-              width: 380,
-              decoration: BoxDecoration(
-                color: Colors.teal[700],
-                borderRadius: BorderRadius.all(Radius.circular(25)),
-                border: Border.all(color: Colors.transparent),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(
-                    Icons.category,
-                    size: 40,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/manage-categories');
+                },
+                child: Container(
+                  height: 100,
+                  width: 180,
+                  decoration: BoxDecoration(
+                    color: Colors.teal[700],
+                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                    border: Border.all(color: Colors.transparent),
                   ),
-                  Text(
-                    'مدیریت دسته بندی ',
-                    style: TextStyle(color: Colors.white),
-                  )
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed('/manage-orders');
-            },
-            child: Container(
-              height: 100,
-              width: 380,
-              decoration: BoxDecoration(
-                color: Colors.teal[700],
-                borderRadius: BorderRadius.all(Radius.circular(25)),
-                border: Border.all(color: Colors.transparent),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(
-                    Icons.list_alt_outlined,
-                    size: 40,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(
+                        Icons.category,
+                        size: 40,
+                      ),
+                      Text(
+                        'مدیریت دسته بندی ',
+                        style: TextStyle(color: Colors.white),
+                      )
+                    ],
                   ),
-                  Text(
-                    ' مدیریت سفارشات',
-                    style: TextStyle(color: Colors.white),
-                  )
-                ],
+                ),
               ),
-            ),
+              SizedBox(
+                height: 30,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/manage-orders');
+                },
+                child: Container(
+                  height: 100,
+                  width: 180,
+                  decoration: BoxDecoration(
+                    color: Colors.teal[700],
+                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                    border: Border.all(color: Colors.transparent),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(
+                        Icons.list_alt_outlined,
+                        size: 40,
+                      ),
+                      Text(
+                        ' مدیریت سفارشات',
+                        style: TextStyle(color: Colors.white),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
           SizedBox(
             height: 30,
