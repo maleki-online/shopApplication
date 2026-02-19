@@ -1,0 +1,75 @@
+#name: shop_app
+#description: "A new Flutter project."
+#publish_to: 'none'
+#version: 0.1.0
+#
+#environment:
+#  sdk: ^3.8.1
+#
+#dependencies:
+#  cupertino_icons: ^1.0.8
+#  flutter:
+#    sdk: flutter
+#  http: ^1.4.0
+#
+#
+#dev_dependencies:
+#  flutter_test:
+#    sdk: flutter
+#  provider: ^6.1.1        # برای مدیریت وضعیت (state management)
+#  shared_preferences: ^2.2.2  # برای ذخیره نوع کاربر و اطلاعات پایه
+#  google_fonts: ^6.1.0    # فونت‌های زیبا
+#  flutter_svg: ^2.0.9     # اگر از آیکون‌های SVG استفاده کردی
+#  flutter_lints: ^5.0.0
+#
+#flutter:
+#  uses-material-design: true
+#
+#  assets:
+#    - assets/images/
+
+name: digital_shop
+description: فروشگاه لوازم دیجیتال با فلاتر
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  provider: ^6.1.2 # پکیج مدیریت وضعیت
+  image_picker: ^1.1.2
+  shared_preferences: ^2.2.2
+  intl: ^0.20.2
+  carousel_slider_plus: ^5.0.0         # برای ایجاد اسلایدر
+  smooth_page_indicator: ^1.1.0    # برای اندیکاتور صاف
+  url_launcher: ^6.2.1  
+  flutter_carousel_slider: ^1.0.8          # برای باز کردن لینک‌های خارجی
+
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_test:
+    sdk: flutter
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Vazir
+      fonts:
+        - asset: assets/fonts/Vazir.ttf
